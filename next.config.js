@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: "export",
-  basePath: "/tennis",
+  basePath: "/tennis-frontend",
 
   compiler: {
     // Enables the styled-components SWC transform
