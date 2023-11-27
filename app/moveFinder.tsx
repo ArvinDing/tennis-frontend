@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles/moveFinder.css';
 
-const MoveFinder = (data) => {
+const MoveFinder = (data: any) => {
     const [troops, setTroops] = useState("");
     const [opponentTroops, setOpponentTroops] = useState("");
     const [scoreDifference, setScoreDifference] = useState("");
@@ -17,22 +17,22 @@ const MoveFinder = (data) => {
             setMessageColor("#90EE90")
         };
         let invalid = () => { setMessage("Invalid Input"); setMessageColor("#ff9b9b") };
-        if (troops.length===0 || opponentTroops.length ===0||scoreDifference.length===0) {
+        if (troops.length === 0 || opponentTroops.length === 0 || scoreDifference.length === 0) {
             invalid();
             return;
         }
         let nTroops = Number(troops);
         let nOpponentTroops = Number(opponentTroops);
         let nScoreDifference = Number(scoreDifference);
-        if (isNaN(nTroops)|| nTroops > 100 || nTroops < 0) {
+        if (isNaN(nTroops) || nTroops > 100 || nTroops < 0) {
             invalid();
             return;
         }
-        if (isNaN(nOpponentTroops)|| nOpponentTroops > 100 || nOpponentTroops < 0) {
+        if (isNaN(nOpponentTroops) || nOpponentTroops > 100 || nOpponentTroops < 0) {
             invalid();
             return;
         }
-        if (isNaN(nScoreDifference)|| nScoreDifference > 2 || nScoreDifference < -2) {
+        if (isNaN(nScoreDifference) || nScoreDifference > 2 || nScoreDifference < -2) {
             invalid();
             return;
         }

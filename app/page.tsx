@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image'
 import React, { useEffect, useState } from 'react';
-import MoveFinder from './MoveFinder';
+import MoveFinder from './moveFinder';
 
 export default function Home() {
   const [forcedMoveData, setForcedMoveData] = useState<Record<string, number> | null>(null);
